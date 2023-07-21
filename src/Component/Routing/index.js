@@ -1,0 +1,21 @@
+import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import Products from '../Products'
+import Product from '../Product'
+import Home from '../Home'
+import ToDOList from '../To-Do-List'
+
+function Routing() {
+  return (
+    <div>
+        <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path="/products" element={<Products/>} />
+            <Route path="/product" element={<Product/>} />
+            <Route path="/toDo" element={<ToDOList/>} />
+        </Routes>
+    </div>
+  )
+}
+
+export default Routing
