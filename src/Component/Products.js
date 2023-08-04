@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 
 function Products() {
   const [productDetails, setProductDetails] = useState([]);
@@ -14,7 +15,7 @@ function Products() {
     getProductDetails()
   },[])
 
-  console.log(productDetails.id);
+  console.log(productDetails);
 
   return (
     <>
@@ -22,12 +23,13 @@ function Products() {
       <div className="row">
         {productDetails.map((product) =>(
           <div key={product.id} className="col-md-3 my-3 d-flex justify-content-center">
+            <Link to={`/product/${product.id}`}>
             <div className="card" style={{width: "20rem"}}>
-              <img src={product.image} className="card-img-top p-3" style={{height:"20rem"}} alt="User"/>
+              <img src={product.image} className="img-fluid card-img-top p-3" style={{height:"20rem"}} alt="User"/>
               <div className="card-body">
-                <h5 className="card-title">{product.title}</h5>
+                <h5 className="productName card-title">{product.title}</h5>
                 <h3 className="card-text">${product.price}</h3>
-                <p className="card-text">{product.description}</p>
+                {/* <p className="card-text">{product.description}</p> */}
               </div>
               {/* <ul className="list-group list-group-flush">
                 <li className="list-group-item">An item</li>
@@ -35,6 +37,7 @@ function Products() {
                 <li className="list-group-item">A third item</li>
               </ul> */}
             </div>
+            </Link>
           </div>
         ))}
       </div>

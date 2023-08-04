@@ -19,10 +19,7 @@ function Header(){
                             <Link className="nav-link "  to="/products">Products</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link " to="/product" >Product</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link " >Cart</Link>
+                            <Link className="nav-link " to="/cart">Cart</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link " to="/toDo" >ToDoList</Link>

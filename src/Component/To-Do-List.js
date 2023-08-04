@@ -28,7 +28,6 @@ function ToDOList() {
                 <textarea className='form-control mb-3' rows="8" value={list.map(item => "- " + item).join('\n')}></textarea>
             </div>
             <div className="col-md-5 border border-2 m-3">
-                
             </div>
         </div>
     )
