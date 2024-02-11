@@ -5,7 +5,6 @@ import { useDispatch } from 'react-redux'
 import { addToCart } from './redux/types/ProductAction'
 
 function Product() {
-
   const [product, setProduct] = useState({})
   const [isProductAdded, setIsProductAdded] = useState(false)
   const { id } = useParams()
@@ -18,7 +17,7 @@ function Product() {
   console.log(product)
   useEffect(() => {
     getProductData();
-  }, [])
+  })
 
   return (
     <>
